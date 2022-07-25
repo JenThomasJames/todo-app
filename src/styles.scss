@@ -1,1 +1,18 @@
-/* You can add global styles to this file, and also import other style files */
+@import "./app/sass/variables";
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: Roboto, sans-serif;
+}
+
+h1,
+label,
+input {
+    color: $primary;
+}
+
+text-brand {
+    color: $primary;
+}
