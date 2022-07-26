@@ -8,6 +8,7 @@ import { BrandButtonComponent } from './components/shared/brand-button/brand-but
 import { BrandButtonOutlineComponent } from './components/shared/brand-button-outline/brand-button-outline.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { RegisterComponent } from './components/register/register.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { HttpClientModule } from '@angular/common/http';
     LoginComponent,
     BrandButtonComponent,
     BrandButtonOutlineComponent,
+    RegisterComponent,
   ],
   imports: [
     BrowserModule,

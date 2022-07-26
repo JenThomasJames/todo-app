@@ -1,10 +1,10 @@
 import { Todo } from "./todo.model";
 
 export interface User{
-    userId: number;
+    userId?: number;
     firstName: string;
     lastName: string;
     email: string;
     password: string;
-    todos: Todo[];
+    //todos: Todo[];
 }
