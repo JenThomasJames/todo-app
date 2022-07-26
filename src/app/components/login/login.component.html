@@ -12,6 +12,9 @@
                 <label for="pwd" class="form-label">Password:</label>
                 <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pswd" formControlName="password">
             </div>
+            <div class="my-3 forgot-password-wrapper">
+                <a class="link" routerLink="/password-recovery">Forgot Password</a>
+            </div>
             <div class="btn-wrapper mt-3">
                 <app-brand-button class="w-100" [buttonText]="'Login'" (click)="onLogin()"></app-brand-button>
             </div>

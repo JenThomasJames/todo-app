@@ -20,7 +20,7 @@ export class AuthService {
     const headers = new HttpHeaders()
       .set('email', email)
       .set('password', password);
-    return this.http.get<User>(this.ROOT_URL + "authenticate", { 'headers': headers });
+    return this.http.get<User>(this.ROOT_URL + "authenticate/", { 'headers': headers });
   }
 
   //adds a new user
@@ -28,5 +28,13 @@ export class AuthService {
     const headers = new HttpHeaders()
       .set('password', user.password);
     return this.http.post<User>(this.ROOT_URL + "authenticate/new", user, { 'headers': headers });
+  }
+
+  //changes the password for the user
+  changePassword(email: string, password: string): Observable<any>{
+    const headers = new HttpHeaders()
+    .set('email', email)
+    .set('password', password);
+    return this.http.put(this.ROOT_URL + "authenticate/password/new", [],  {'headers': headers});
   }
 }

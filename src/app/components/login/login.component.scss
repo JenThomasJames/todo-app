@@ -43,11 +43,24 @@ h1 {
     justify-content: center;
 }
 
+.forgot-password-wrapper {
+    display: flex;
+    justify-content: end;
+}
+.link{
+    color: rgb(176, 176, 176);
+    font-size: 15px;
+    &:hover{
+        text-decoration: none;
+    }
+}
+
 a {
     text-decoration: none;
     cursor: pointer;
     color: $primary;
-     &:hover{
+
+    &:hover {
         color: $high;
         text-decoration: underline;
     }
