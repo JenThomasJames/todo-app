@@ -9,6 +9,9 @@ import { BrandButtonOutlineComponent } from './components/shared/brand-button-ou
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { RegisterComponent } from './components/register/register.component';
+import { HomeComponent } from './components/home/home.component';
+import { PanelComponent } from './components/home/panel/panel.component';
+import { PasswordRecoveryComponent } from './components/login/password-recovery/password-recovery.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +20,9 @@ import { RegisterComponent } from './components/register/register.component';
     BrandButtonComponent,
     BrandButtonOutlineComponent,
     RegisterComponent,
+    HomeComponent,
+    PanelComponent,
+    PasswordRecoveryComponent,
   ],
   imports: [
     BrowserModule,

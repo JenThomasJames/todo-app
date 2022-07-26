@@ -1,0 +1,14 @@
+@import "../../../sass/variables";
+
+.container-fluid {
+    background-color: $primary;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h1 {
+    color: $secondary;
+    flex: 2;
+}

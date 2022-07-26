@@ -30,16 +30,15 @@ export class LoginComponent implements OnInit {
     if (this.validateInput(email, password)) {
       //calls the service to authenticate user
       this.authService.authenticateUser(email, password).subscribe(data => {
-        sessionStorage.setItem('userId', ''+data.userId);
+        sessionStorage.setItem('userId', '' + data.userId);
         sessionStorage.setItem('email', data.email);
         sessionStorage.setItem('firstname', data.firstName);
         sessionStorage.setItem('lastname', data.lastName);
-
-        //navigate to home
+        this.router.navigate(['home']);
       }, error => {
         alert("Login Failed. Please try again");
       });
-      
+
     }
     //user messed up something while giving the input
     else {
