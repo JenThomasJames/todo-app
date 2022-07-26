@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
+import { Router } from '@angular/router';
 import { User } from 'src/app/model/user.model';
 import { AuthService } from 'src/app/services/auth.service';
 
@@ -15,7 +16,7 @@ export class LoginComponent implements OnInit {
     password: new FormControl('')
   });
 
-  constructor(private authService: AuthService) { }
+  constructor(private authService: AuthService, private router: Router) { }
 
   ngOnInit(): void {
   }
@@ -28,15 +29,17 @@ export class LoginComponent implements OnInit {
     //checks if the user entered details are proper
     if (this.validateInput(email, password)) {
       //calls the service to authenticate user
-      let user: User | void = this.authService.authenticateUser(email, password);
-      if (user) {
-        //replace with redirection to home screen
-        alert('Authenticated!');
-      }
-      else {
-        //tell the user that he is not authenticated to proceed further
-        alert('Not authenticated!');
-      }
+      this.authService.authenticateUser(email, password).subscribe(data => {
+        sessionStorage.setItem('userId', ''+data.userId);
+        sessionStorage.setItem('email', data.email);
+        sessionStorage.setItem('firstname', data.firstName);
+        sessionStorage.setItem('lastname', data.lastName);
+
+        //navigate to home
+      }, error => {
+        alert("Login Failed. Please try again");
+      });
+      
     }
     //user messed up something while giving the input
     else {
