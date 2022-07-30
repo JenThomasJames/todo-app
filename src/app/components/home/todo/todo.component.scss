@@ -1,29 +1,58 @@
 @import "../../../sass/variables";
 
-.container{
+.container {
+    background-color: $primary;
+    color: $secondary;
+    font-size: 20px;
     border-radius: 20px;
     padding: 40px;
-    box-shadow: 10px 10px 47px 0px rgba(0,0,0,0.29);
-
-    &:hover{
-        box-shadow: 10px 10px 47px 0px rgba(0, 0, 0, 0.469);
- 
-    }
+    box-shadow: 10px 10px 47px 0px rgba(0, 0, 0, 0.29);
+    margin-top: 30px;
 }
 
-.high{
-    background-color: $high;
-    color: #fff;
-}
-.medium{
-    background-color: $medium;
-}
-.low{
-    background-color: $low;
-    color: #fff;
+.text-blue{
+    color: #88c0d0;
 }
 
-.btn-container{
+.high {
+    border-left: 30px solid $high;
+}
+
+.medium {
+    border-left: 30px solid $medium;
+}
+
+.low {
+    border-left: 30px solid $low;
+}
+
+.btn-container {
     display: flex;
     justify-content: end;
+}
+
+.todo-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn-transparent {
+    background: transparent;
+    border: none;
+    color: $secondary;
+
+    &:hover {
+        border: 2px dashed $secondary;
+        color: #fff;
+    }
+}
+.btn-outline{
+    background: transparent;
+    color: $secondary;
+    border: 1px solid $secondary;
+
+    &:hover{
+        background: $secondary;
+        color: $primary;
+    }
 }

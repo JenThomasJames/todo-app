@@ -27,4 +27,14 @@ export class TodoService {
     return this.http.get<Todo[]>(this.ROOT_URL + 'user/' + userId + '/todos');
   }
 
+  //finds a todo by ID
+  findTodo(todoId: number): Observable<Todo>{
+    return this.http.get<Todo>(this.ROOT_URL + ''+todoId);
+  }
+
+  //updates a todo
+  updateTodo(todo: Todo){
+    return this.http.put(this.ROOT_URL, todo);
+  }
+
 }
