@@ -1,7 +1,8 @@
-export interface Todo{
-    todoId: number;
+export interface Todo {
+    todoId?: number;
     title: string;
     body: string;
     priority: string;
-    createdOn: Date;
+    userId: number;
+    createdDate?: string;
 }

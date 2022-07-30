@@ -1,0 +1,12 @@
+<div class="container-fluid">
+    <div class="container" ngClass="{{ todo.priority.toLowerCase() }}" *ngFor="let todo of todos">
+        <h1> {{ todo.title }} </h1>
+        <p>
+            {{ todo.body }}
+        </p>
+        <div class="btn-container">
+            <button class="btn btn-primary" (click)="onMarkAsCompleted(todo.todoId)"><i
+                    class="bi bi-check2-all"></i>&nbsp;&nbsp;&nbsp;Mark as completed</button>
+        </div>
+    </div>
+</div>

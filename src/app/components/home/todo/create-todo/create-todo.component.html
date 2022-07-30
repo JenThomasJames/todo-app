@@ -1,0 +1,30 @@
+<div class="container-fluid">
+    <div class="container">
+        <div class="header-wrapper">
+            <h1>Create Todo</h1>
+        </div>
+        <form [formGroup]="todoForm">
+            <div class="mb-3 mt-3">
+                <label for="title" class="form-label">Title:</label>
+                <input type="text" class="form-control" id="title" placeholder="Enter title" name="title"
+                    formControlName="title">
+            </div>
+            <div class="my-3">
+                <label for="comment">Description:</label>
+                <textarea class="form-control" rows="5" id="description" name="description"
+                    formControlName="description" placeholder="Enter description"></textarea>
+            </div>
+            <div class="my-3">
+                <select class="form-select" formControlName="priority">
+                    <option [selected]="'selected'">--Select Priority--</option>
+                    <option>High</option>
+                    <option>Medium</option>
+                    <option>Low</option>
+                </select>
+            </div>
+            <div class="btn-wrapper mt-3">
+                <app-brand-button class="w-100" [buttonText]="'Create'" (click)="onCreate()"></app-brand-button>
+            </div>
+        </form>
+    </div>
+</div>

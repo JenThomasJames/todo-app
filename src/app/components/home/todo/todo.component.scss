@@ -1,0 +1,29 @@
+@import "../../../sass/variables";
+
+.container{
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 10px 10px 47px 0px rgba(0,0,0,0.29);
+
+    &:hover{
+        box-shadow: 10px 10px 47px 0px rgba(0, 0, 0, 0.469);
+ 
+    }
+}
+
+.high{
+    background-color: $high;
+    color: #fff;
+}
+.medium{
+    background-color: $medium;
+}
+.low{
+    background-color: $low;
+    color: #fff;
+}
+
+.btn-container{
+    display: flex;
+    justify-content: end;
+}

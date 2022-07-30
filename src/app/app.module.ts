@@ -12,6 +12,8 @@ import { RegisterComponent } from './components/register/register.component';
 import { HomeComponent } from './components/home/home.component';
 import { PanelComponent } from './components/home/panel/panel.component';
 import { PasswordRecoveryComponent } from './components/login/password-recovery/password-recovery.component';
+import { TodoComponent } from './components/home/todo/todo.component';
+import { CreateTodoComponent } from './components/home/todo/create-todo/create-todo.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +25,8 @@ import { PasswordRecoveryComponent } from './components/login/password-recovery/
     HomeComponent,
     PanelComponent,
     PasswordRecoveryComponent,
+    TodoComponent,
+    CreateTodoComponent,
   ],
   imports: [
     BrowserModule,
